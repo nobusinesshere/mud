@@ -21,6 +21,12 @@ public class Cell {
         description = "No description";
         cellId = null;
     }
+    public Cell(Integer cellId) {
+        neighborCells = new EnumMap<>(Direction.class);
+        characters = new HashSet<>();
+        description = "No description";
+        this.cellId = cellId;
+    }
 
     public Cell(EnumMap<Direction, Integer> neighborCells, Set<Integer> characters, String description, Integer cellId) {
         this.neighborCells = neighborCells;

@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * @author tim
  */
 @Configuration
-@ComponentScan("com.argondamn.mud")
+@ComponentScan(basePackages = "com.argondamn.mud")
 public class SpringConfig {
     
 }

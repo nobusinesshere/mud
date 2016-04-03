@@ -1,6 +1,7 @@
 package com.argondamn.mud.world.model;
 
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -10,21 +11,32 @@ import java.util.Map;
 public class World {
     
     private Map<Integer, Cell> cells;
-    private Map<Integer, Actor> characters;
+    private Map<Integer, Actor> actors;
 
     public World() {
-        
+        cells = new HashMap<Integer, Cell>();
+        actors = new HashMap<Integer, Actor>();
     }
     
-    public World(Map<Integer, Cell> cells, Map<Integer, Actor> characters) {
+    public World(Map<Integer, Cell> cells, Map<Integer, Actor> actors) {
         this.cells = cells;
-        this.characters = characters;
-    }        
+        this.actors = actors;
+    }      
+    
+    public World addCell(Cell cell) {
+        cells.put(cell.getCellId(), cell);
+        return this;
+    }
+    
+    public World addActor(Actor actor) {
+        actors.put(actor.getCharacterId(), actor);
+        return this;
+    }
     
     public Cell getCell(Integer cellId) {
         return cells.get(cellId);
     }
     public Actor getCharacter(Integer characterId) {
-        return characters.get(characterId);
+        return actors.get(characterId);
     }
 }
