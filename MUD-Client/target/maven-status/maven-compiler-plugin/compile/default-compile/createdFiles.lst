@@ -1,0 +1,5 @@
+com/argondamn/mud/client/config/Application.class
+com/argondamn/mud/client/services/TestResource.class
+com/argondamn/mud/client/config/Initializer.class
+com/argondamn/mud/client/config/SpringConfig.class
+com/argondamn/mud/client/services/TestService.class
