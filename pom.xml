@@ -10,6 +10,7 @@
     </properties>
     <modules>
         <module>MUD-Client</module>
+        <module>World</module>
     </modules>
   
     <dependencyManagement>
